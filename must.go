@@ -16,7 +16,7 @@ func ReturnElseLogFatal(params ...interface{}) interface{} {
 
 	if e[1].Interface() != nil {
 		err := e[1].Interface().(error)
-		log.Fatal(err)
+		log.Panic(err)
 	}
 
 	return e[0].Interface()
